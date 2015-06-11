@@ -35,5 +35,3 @@ end
 def half_length(m)
 	m.even? ? m / 2 - 1 : (m - 1) / 2
 end
-
-puts find_median_sorted_arrays([1], [])
