@@ -6,12 +6,8 @@ def max_area(height)
     most = most(height, head, tail)
 
     while head != tail 
-    	if height[head] < height[tail]
-    		head += 1
-    	else
-    		tail -= 1
-    	end
-		current = most(height, head, tail)
+    	(height[head] < height[tail]) ? head += 1 : tail -= 1
+   		current = most(height, head, tail)
 		most = current if current > most
     end
     most
