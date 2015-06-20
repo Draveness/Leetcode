@@ -28,5 +28,3 @@ def table
         "0" => " "
     }
 end
-
-puts letter_combinations("").inspect
