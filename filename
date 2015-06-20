@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+number = ARGV[0]
+name = ARGV[1]
+
+file_name = "#{number}_#{name.split(" ").join("_").downcase}.rb"
+
+FileUtils.touch(file_name)
