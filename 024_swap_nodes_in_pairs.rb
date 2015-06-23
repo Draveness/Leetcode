@@ -10,29 +10,10 @@
 # @param {ListNode} head
 # @return {ListNode}
 def swap_pairs(head)
-    return head if head.next == nil
-    current_node = head 
-    next_node = current_node.next
-    head = next_node
-
-    while current_node && next_node
-        next_first_node = next_node.next
-        current_node.next = next_node.next.next ? next_node.next.next : next_node.next
-        next_node.next = current_node
-        current_node = next_first_node
-        next_node = next_node.next.next
-    end
-
-    next_node.next = nil
-
-    head
-end
-
-class NilClass
-    def next
-        nil
-    end
-    def next=(value)
-        nil
-    end
+    return head if !head || !head.next
+    next_pair = head.next.next
+    new_head = head.next
+    head.next.next = head
+    head.next = swap_pairs(next_pair)
+    new_head
 end
