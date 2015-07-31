@@ -13,5 +13,3 @@ def divide(dividend, divisor)
     result += 1 if sign < 0 && dividend != 0
     result * sign
 end
-
-puts divide(1,-1)
